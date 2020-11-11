@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dotted-red {
+    background-image: radial-gradient(theme('colors.red') 4px, transparent 5px);
+    background-size: 33px 33px;
+}
