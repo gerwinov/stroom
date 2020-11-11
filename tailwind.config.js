@@ -4,8 +4,13 @@ module.exports = {
     colors: {
       pink: '#F9D9F9',
       orange: '#FC9B59',
+      red: '#FF1300',
     },
-    extend: {},
+    extend: {
+      inset: {
+        '-12': '-4rem',
+      }
+    },
   },
   variants: {},
   plugins: [],
