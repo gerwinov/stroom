@@ -11,6 +11,9 @@ module.exports = {
       magenta: '#FF00FF',
       coal: '#282828',
     },
+    boxShadow: {
+      'sharp-magenta': '20px 20px 0px 3px #FF00FF'
+    },
     extend: {
       inset: {
         '-12': '-4rem',
