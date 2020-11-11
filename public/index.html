@@ -9,25 +9,31 @@
   <title>Welcome to Tailwind!</title>
 </head>
 <body class="antialiased">
-  <div class="bg-pink">
+  <header class="bg-pink">
     <div class="container mx-auto">
       <div class="grid grid-cols-12 gap-4 pt-16 pb-40">
-        <div class="col-span-4">logo in here</div>
-        <div class="col-start-12 col-span-1">menu</div>
-        <div class="col-span-10 bg-orange text-right mt-24">
-          <h1>Stroom Amsterdam</h1>
-          <h2>Zondagochtend 11 uur</h2>
-          <h2>Nieuwe Herengracht 18</h2>
+        <div class="col-span-4 text-red border-magenta border-b-4 text-5xl leading-none pb-2">STROOOOOOM</div>
+        <button class="col-start-12 col-span-1 h-10 w-12" aria-label="menu">
+          <span class="w-full h-1 bg-red block mb-1"></span>
+          <span class="w-full h-1 bg-red block my-2"></span>
+          <span class="w-full h-1 bg-magenta block mt-1"></span>
+          </button>
+        <div class="col-span-10 bg-orange text-right mt-24 border-b-8 border-turquoise py-12">
+          <div class="text-5xl font-black uppercase leading-tight relative -right-12">
+            <h1 class="text-coal">Stroom Amsterdam</h1>
+            <h2 class="text-red-outline">Zondagochtend 11 uur</h2>
+            <h2 class="text-red-outline">Nieuwe Herengracht 18</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="bg-white">
+  <article class="bg-white">
     <div class="container mx-auto">
-      <div class="grid grid-cols-12 gap-4">
+      <div class="grid grid-cols-12 gap-4 -mb-12">
         <div class="col-start-2 col-span-6 mt-24 mb-40">
-          <p class="text-2xl leading-relaxed">
+          <p class="text-2xl leading-relaxed mb-16">
             Stroom scherpt aan, biedt inzicht en verkent ideeën. 
             Is dol op oude denkers en nieuwe helden. 
             Houdt een spiegel voor, confronteert en kleurt buiten de lijntjes. 
@@ -35,8 +41,8 @@
             Is nieuwsgierig en gaat graag het gesprek aan om te leren van de ander.
           </p>
         </div>
-        <div class="col-span-5 relative">
-          <div class="dotted-red absolute w-full h-full -top-12">
+        <div class="col-span-5">
+          <div class="dotted-red relative w-full h-full-12 -top-12">
           </div>
         </div>
       </div>
@@ -55,8 +61,8 @@
         </div>
       </form>
     </div>
-  </div>
-  <div class="bg-coal h-64">
-  </div>
+  </article>
+  <article class="bg-coal h-64">
+  </article>
 </body>
 </html>

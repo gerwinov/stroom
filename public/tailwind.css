@@ -6,3 +6,12 @@
     background-image: radial-gradient(theme('colors.red') 4px, transparent 5px);
     background-size: 33px 33px;
 }
+
+.text-red-outline {
+    -webkit-text-stroke: 2px theme('colors.red');
+    color: transparent;
+}
+
+.h-full-12 {
+    height: calc(100% + 4rem);
+}
