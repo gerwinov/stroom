@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       inset: {
         '-12': '-4rem',
+        '-24': '-8rem',
       }
     },
   },
