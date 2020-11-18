@@ -4,5 +4,18 @@
 
 .dotted-red {
     background-image: radial-gradient(theme('colors.red') 4px, transparent 5px);
-    background-size: 33px 33px;
+    background-size: 32px 32px;
+}
+
+.text-red-outline {
+    -webkit-text-stroke: 2px theme('colors.red');
+    color: transparent;
+}
+
+.h-full-dots-top {
+    height: calc(100% + 19rem);
+}
+
+.h-full-dots-bottom {
+    height: calc(100% + 19rem);
 }

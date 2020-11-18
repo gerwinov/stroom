@@ -8,26 +8,32 @@
   <link rel="stylesheet" href="/build/tailwind.css">
   <title>Welcome to Tailwind!</title>
 </head>
-<body class="antialiased">
-  <div class="bg-pink">
+<body class="antialiased overflow-x-hidden">
+  <header class="bg-pink">
     <div class="container mx-auto">
       <div class="grid grid-cols-12 gap-4 pt-16 pb-40">
-        <div class="col-span-4">logo in here</div>
-        <div class="col-start-12 col-span-1">menu</div>
-        <div class="col-span-10 bg-orange text-right mt-24">
-          <h1>Stroom Amsterdam</h1>
-          <h2>Zondagochtend 11 uur</h2>
-          <h2>Nieuwe Herengracht 18</h2>
+        <div class="col-span-4 text-red border-magenta border-b-4 text-5xl leading-none pb-2">STROOOOOOM</div>
+        <button class="col-start-12 col-span-1 h-10 w-12" aria-label="menu">
+          <span class="w-full h-1 bg-red block mb-1"></span>
+          <span class="w-full h-1 bg-red block my-2"></span>
+          <span class="w-full h-1 bg-magenta block mt-1"></span>
+          </button>
+        <div class="col-span-10 bg-orange text-right mt-24 border-b-8 border-turquoise py-12">
+          <div class="text-5xl font-black uppercase leading-tight relative -right-12">
+            <h1 class="text-coal">Stroom Amsterdam</h1>
+            <h2 class="text-red-outline">Zondagochtend 11 uur</h2>
+            <h2 class="text-red-outline">Nieuwe Herengracht 18</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="bg-white">
+  <article class="bg-white">
     <div class="container mx-auto">
-      <div class="grid grid-cols-12 gap-4">
+      <div class="grid grid-cols-12 gap-4 -mb-12 relative">
         <div class="col-start-2 col-span-6 mt-24 mb-40">
-          <p class="text-2xl leading-relaxed">
+          <p class="text-2xl leading-relaxed mb-16">
             Stroom scherpt aan, biedt inzicht en verkent ideeën. 
             Is dol op oude denkers en nieuwe helden. 
             Houdt een spiegel voor, confronteert en kleurt buiten de lijntjes. 
@@ -35,10 +41,68 @@
             Is nieuwsgierig en gaat graag het gesprek aan om te leren van de ander.
           </p>
         </div>
-        <div class="col-span-5 relative">
-          <div class="dotted-red absolute w-full h-full -top-12">
-          </div>
+        <div class="dotted-red absolute w-1/2 h-full-dots-top -top-12 -right-24">
         </div>
-  </div>
+      </div>
+      <form class="grid grid-cols-12 gap-4 bg-blue py-12 border-b-8 border-magenta relative -bottom-12">
+        <div class="col-start-2 col-span-11">
+          <h2 class="uppercase text-turquoise text-4xl font-black">Nieuwsbrief</h2>
+        </div>
+        <div class="col-start-2 col-span-7">
+          <input type="text" class="w-full h-full px-3">
+        </div>
+        <div class="col-span-3">
+          <input type="submit" class="w-full bg-magenta py-3 text-white uppercase text-2xl font-semibold">
+        </div>
+        <div class="col-start-2 col-span-11">
+          <a href="#" class="uppercase text-white text-2xl">Oud nieuws ></a>
+        </div>
+      </form>
+    </div>
+  </article>
+
+  <article class="bg-coal">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-12 gap-4 pt-40 pb-48">
+        <div class="col-span-12 text-right">
+          <h1 class="text-4xl font-black uppercase text-magenta mb-12">Aanstaande zondag</h1>
+        </div>
+        <div class="col-start-2 col-span-7 bg-white h-full shadow-sharp-magenta">
+        </div>
+        <div class="col-start-10 col-span-3">
+          <p class="text-2xl leading-relaxed mb-16 text-white">
+            I'm baby fashion axe venmo literally tilde la croix raclette. 
+            Thundercats next level viral bushwick +1. Chambray 90's gochujang everyday carry kale chips shabby chic. 
+            Tbh live-edge gastropub, gentrify thundercats edison bulb bicycle rights semiotics pinterest blue bottle copper mug helvetica small batch.
+          </p>
+          <a href="#" class="uppercase text-white text-2xl">Archief ></a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="bg-white">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-12 gap-4 relative pb-24">
+        <div class="col-start-2 col-span-11 bg-pink h-full w-screen absolute"></div>
+        <div class="dotted-red absolute w-1/3 h-full-dots-bottom -top-12 -left-24"></div>
+
+        <div class="col-span-4 bg-orange border-b-8 border-turquoise mt-48 z-10 py-10 px-8">
+          <p class="text-red-outline text-4xl font-black uppercase">"Elke zondag om 11 uur."</p>
+          <p class="text-red text-3xl my-6">- Stroominee, 2020</p>
+        </div>
+
+        <div class="col-span-4 bg-blue border-b-8 border-magenta mt-24 mb-24 z-10 py-10 px-8">
+          <p class="text-turquoise text-4xl font-black uppercase">"Leuk om hier te zijn."</p>
+          <p class="text-turquoise text-3xl my-6">- Boris van der Ham, 2020</p>
+        </div>
+
+        <div class="col-span-4 bg-magenta border-b-8 border-orange mt-48 z-10 py-10 px-8">
+          <p class="text-white text-4xl font-black uppercase">"Ik kom spoedig."</p>
+          <p class="text-white text-3xl my-6">- Jezus, 33</p>
+        </div>
+      </div>
+    </div>
+  </article>
 </body>
 </html>
