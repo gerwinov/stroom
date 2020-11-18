@@ -18,6 +18,14 @@ module.exports = {
       inset: {
         '-12': '-4rem',
         '-24': '-8rem',
+      },
+      fontFamily: {
+        'HelveticaNeueLTPro-BlkEx': ['HelveticaNeueLTPro-BlkEx'],
+        'HelveticaNeueLTPro-BlkExO': ['HelveticaNeueLTPro-BlkExO'],
+        'HelveticaNeueLTPro-Ex': ['HelveticaNeueLTPro-Ex'],
+        'HelveticaNeueLTPro-ExO': ['HelveticaNeueLTPro-ExO'],
+        'HelveticaNeueLTPro-MdCn': ['HelveticaNeueLTPro-MdCn'],
+        'HelveticaNeueLTPro-MdCnO': ['HelveticaNeueLTPro-MdCnO'],
       }
     },
   },
