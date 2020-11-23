@@ -16,8 +16,11 @@ module.exports = {
     },
     extend: {
       inset: {
+        '-6': '-2rem',
         '-12': '-4rem',
         '-24': '-8rem',
+        '5%': '5%',
+        '100%': '100%',
       },
       fontFamily: {
         'HelveticaNeueLTPro-BlkEx': ['HelveticaNeueLTPro-BlkEx'],
