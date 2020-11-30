@@ -4,31 +4,31 @@
 
 @font-face {
     font-family: 'HelveticaNeueLTPro-BlkEx';
-    src: url(assets/HelveticaNeueLTPro-BlkEx.otf) format('opentype');
+    src: url(../assets/HelveticaNeueLTPro-BlkEx.otf) format('opentype');
 }
 @font-face {
     font-family: 'HelveticaNeueLTPro-BlkExO';
-    src: url(assets/HelveticaNeueLTPro-BlkExO.otf) format('opentype');
+    src: url(../assets/HelveticaNeueLTPro-BlkExO.otf) format('opentype');
 }
 @font-face {
     font-family: 'HelveticaNeueLTPro-Ex';
-    src: url(assets/HelveticaNeueLTPro-Ex.otf) format('opentype');
+    src: url(../assets/HelveticaNeueLTPro-Ex.otf) format('opentype');
 }
 @font-face {
     font-family: 'HelveticaNeueLTPro-ExO';
-    src: url(assets/HelveticaNeueLTPro-ExO.otf) format('opentype');
+    src: url(../assets/HelveticaNeueLTPro-ExO.otf) format('opentype');
 }
 @font-face {
     font-family: 'HelveticaNeueLTPro-MdCn';
-    src: url(assets/HelveticaNeueLTPro-MdCn.otf) format('opentype');
+    src: url(../assets/HelveticaNeueLTPro-MdCn.otf) format('opentype');
 }
 @font-face {
     font-family: 'HelveticaNeueLTPro-MdCnO';
-    src: url(assets/HelveticaNeueLTPro-MdCnO.otf) format('opentype');
+    src: url(../assets/HelveticaNeueLTPro-MdCnO.otf) format('opentype');
 }
 .dotted-red {
     background-image: radial-gradient(theme('colors.red') 4px, transparent 5px);
-    background-size: 32px 32px;
+    background-size: 32px 32px; 
 }
 
 .text-red-outline {
