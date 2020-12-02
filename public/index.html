@@ -8,6 +8,22 @@
   <link rel="preload" href="build/tailwind.css" as="style">
   <link rel="stylesheet" href="build/tailwind.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"/>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd2vYarNQQmRx3GT-SaUxK_r9hONyPe1E&map_ids=7ad385e174d1657c&callback=initMap"></script>
+  <script type="text/javascript">
+    function initMap() {
+      const stroomLatLng = { lat: 52.366, lng: 4.904 };
+      const map = new google.maps.Map(document.getElementById("map-canvas"), {
+        center: stroomLatLng,
+        zoom: 16,
+        mapId: "7ad385e174d1657c"
+      });
+      const marker = new google.maps.Marker({
+        position: stroomLatLng,
+        map: map,
+        label: "Nieuwe Herengracht 18a"
+      });
+    }
+  </script>
   <title>STROOM Amsterdam</title>
 </head>
 <body class="antialiased overflow-x-hidden">
@@ -117,7 +133,7 @@
       <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 pt-16 md:pt-24">
         <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8">
           <h1 class="text-xl md:text-3xl lg:text-4xl font-black uppercase text-blue mb-5 lg:mb-8 z-10 font-HelveticaNeueLTPro-BlkEx">Hier moet je zijn</h1>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.241346441308!2d4.901653016142076!3d52.36604365537928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609962ec85d75%3A0xf6604800745d880a!2sNieuwe%20Herengracht%2018%2C%201018%20DP%20Amsterdam!5e0!3m2!1snl!2snl!4v1606157130006!5m2!1snl!2snl" height="299" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="w-full"></iframe>
+          <div id="map-canvas" class="w-full" style="height: 299px"></div>
         </div>
       </div>
     </div>
