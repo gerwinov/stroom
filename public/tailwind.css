@@ -27,7 +27,7 @@
     src: url(../assets/HelveticaNeueLTPro-MdCnO.otf) format('opentype');
 }
 .dotted-red {
-    background-image: radial-gradient(theme('colors.red') 4px, transparent 5px);
+    background-image: radial-gradient(theme('colors.red') 3px, transparent 4px);
     background-size: 32px 32px; 
 }
 
@@ -54,6 +54,10 @@
 }
 
 @media only screen and (min-width: 769px) {
+    .dotted-red {
+        background-image: radial-gradient(theme('colors.red') 4px, transparent 5px);
+    }
+
     .h-full-dots-top {
         height: calc(100% + 16rem) !important;
     }
