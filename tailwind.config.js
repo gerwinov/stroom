@@ -8,19 +8,24 @@ module.exports = {
       red: '#FF1300',
       blue: '#0000FF',
       turquoise: '#00FFFF',
+      lila: '#F687F9',
       magenta: '#FF00FF',
       coal: '#282828',
     },
     boxShadow: {
-      'sharp-magenta': '20px 20px 0px 3px #FF00FF'
+      'sharp-lila': '20px 20px 0px 3px #F687F9'
     },
     extend: {
       inset: {
         '-6': '-2rem',
         '-12': '-4rem',
         '-24': '-8rem',
+        '-40': '-14rem',
         '5%': '5%',
         '100%': '100%',
+      },
+      height: {
+        player: '25rem',
       },
       fontFamily: {
         'HelveticaNeueLTPro-BlkEx': ['HelveticaNeueLTPro-BlkEx'],
