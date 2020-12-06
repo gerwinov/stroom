@@ -28,9 +28,6 @@ module.exports = {
         '85': '25rem',
         '105': '32rem',
       },
-      minWidth: {
-        'hd': '1920px',
-      },
       fontFamily: {
         'HelveticaNeueLTPro-BlkEx': ['HelveticaNeueLTPro-BlkEx'],
         'HelveticaNeueLTPro-BlkExO': ['HelveticaNeueLTPro-BlkExO'],

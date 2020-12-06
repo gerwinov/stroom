@@ -66,3 +66,9 @@
         height: calc(100% + 35rem) !important;
     }
 }
+
+@media only screen and (min-width: 1920px) {
+    .w-hd-80 {
+        width: 90%;
+    }
+}
