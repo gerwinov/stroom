@@ -116,7 +116,7 @@
         <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8">
           <h1 class="text-xl md:text-3xl lg:text-4xl font-black uppercase text-blue mb-5 lg:mb-8 z-10 font-HelveticaNeueLTPro-BlkEx">Hier moet je zijn</h1>
           <div id="map-canvas" class="w-full" style="height: 400px; filter: grayscale(100%);"></div>
-          <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8 relative left-0 bg-blue bg-opacity-100" style="top: -400px; height: 400px; mix-blend-mode: overlay; pointer-events: none; filter: saturate(10)"></div>
+          <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8 relative left-0 bg-blue" style="top: -400px; height: 400px; pointer-events: none; mix-blend-mode: overlay; filter: saturate(10) opacity(1)"></div>
         </div>
       </div>
     </div>
@@ -191,8 +191,13 @@
       const marker = new google.maps.Marker({
         position: stroomLatLng,
         map: map,
-        label: {text: "Nieuwe Herengracht 18"},
-        //collisionBehavior: google.maps.CollisionBehavior.REQUIRED_AND_HIDES_OPTIONAL,
+        animation: google.maps.Animation.DROP,
+        label: {
+          text: "Nieuwe Herengracht 18",
+          fontWeight: "bold",
+          fontSize: "16px",
+          color: "blue"
+        },
       });
     }
   </script>
