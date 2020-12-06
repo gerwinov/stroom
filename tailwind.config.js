@@ -25,7 +25,7 @@ module.exports = {
         '100%': '100%',
       },
       height: {
-        player: '25rem',
+        '85': '25rem',
       },
       fontFamily: {
         'HelveticaNeueLTPro-BlkEx': ['HelveticaNeueLTPro-BlkEx'],

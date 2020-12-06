@@ -57,7 +57,7 @@
           <h2 class="uppercase text-turquoise text-xl md:text-3xl lg:text-4xl font-black font-HelveticaNeueLTPro-BlkEx">Nieuwsbrief</h2>
         </div>
         <div class="col-span-4 md:col-start-2 lg:col-start-2 md:col-span-4 lg:col-span-7">
-          <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="w-full h-12 md:h-full px-3">
+          <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="w-full h-12 md:h-full px-3 text-sm md:text-lg lg:text-2xl">
         </div>
         <div class="col-span-4 md:col-span-2 lg:col-span-3">
           <input type="submit" class="w-full bg-magenta py-3 text-white uppercase text-lg lg:text-2xl font-semibold font-HelveticaNeueLTPro-MdCn cursor-pointer" value="Schrijf je in">
@@ -72,7 +72,7 @@
         <div class="col-span-4 md:col-span-8 lg:col-span-12 text-right">
           <h1 class="text-xl md:text-3xl lg:text-4xl font-black uppercase text-magenta md:mb-12 font-HelveticaNeueLTPro-BlkEx">Aanstaande zondag</h1>
         </div>
-        <div class="col-span-4 md:col-start-2 lg:col-start-2 md:col-span-4 lg:col-span-7 bg-white h-64 md:h-player shadow-sharp-lila mr-4 md:mr-8">
+        <div class="col-span-4 md:col-start-2 lg:col-start-2 md:col-span-4 lg:col-span-7 bg-white h-64 md:h-85 shadow-sharp-lila mr-4 md:mr-8">
           <iframe style="filter: sepia(1) saturate(0); -webkit-filter: sepia(1) saturate(0);" class="w-full h-full" src="https://www.youtube.com/embed/YNtUgLjQX_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding" allowfullscreen></iframe>
         </div>
         <div class="col-span-4 md:col-start-6 md:col-span-3 lg:col-start-10 lg:col-span-3">
@@ -86,10 +86,10 @@
     </div>
   </article>
 
-  <article>
+  <article class="relative">
+    <div class="bg-pink h-full w-2/3 absolute right-0"></div>
     <div class="container mx-auto px-4 md:px-0 overflow-hidden md:overflow-visible">
       <div class="grid grid-cols-4 md:grid-cols-12 gap-4 relative pb-16 lg:pb-24">
-        <div class="col-span-3 col-start-2 md:col-start-2 md:col-span-11 bg-pink h-full w-screen absolute"></div>
         <div class="dotted-red absolute w-1/2 md:w-1/3 h-full-dots-bottom -top-12 -left-6 md:-left-24 z-10"></div>
 
         <div class="col-span-4 bg-orange border-b-8 border-turquoise mt-16 md:mt-32 lg:mt-48 z-10 md:py-10 p-6 md:px-8">
@@ -99,7 +99,7 @@
 
         <div class="col-span-4 bg-blue border-b-8 border-lila mt-4 md:mt-16 lg:mt-24 md:mb-24 z-10 md:py-10 p-6 md:px-8">
           <p class="text-turquoise text-xl md:text-2xl lg:text-4xl font-black uppercase font-HelveticaNeueLTPro-BlkExO">&#x93;Leuk om hier te zijn.&#x94;</p>
-          <p class="text-turquoise text-base md:text-lg lg:text-3xl mt-4 md:my-6 font-HelveticaNeueLTPro-Ex">- Boris van der Ham, 2020</p>
+          <p class="text-turquoise text-base md:text-lg lg:text-3xl mt-4 md:my-6 font-HelveticaNeueLTPro-Ex block h-12">- <span class="name-shuffle"></span></p>
         </div>
 
         <div class="col-span-4 bg-magenta border-b-8 border-orange mt-4 md:mt-32 lg:mt-48 z-10 md:py-10 p-6 md:px-8">
@@ -123,7 +123,7 @@
   </article>
 
   <article class="bg-coal">
-    <div class="bg-coal -top-12 -mb-12 relative overflow-x-hidden md:overflow-visible">
+    <div class="bg-coal -top-12 -mb-12 relative overflow-x-hidden">
       <div class="container mx-auto px-4 md:px-0">
         <div class="grid md:grid-cols-8 lg:grid-cols-12 gap-4 pt-20 md:pt-40">
           <div class="col-span-4 md:col-span-7 md:col-start-2 lg:col-span-11 lg:col-start-2">
@@ -133,14 +133,14 @@
             <div class="md:hidden w-screen border-t-4 border-l-4 border-b-4 border-lila rounded-l-2xl pt-12 pb-24 lg:pb-32 text-right absolute left-100% top-0"></div>
             <div class="w-screen border-t-4 border-r-4 border-b-4 border-lila rounded-r-2xl pt-12 pb-24 lg:pb-32 text-right absolute right-5% md:right-0 top-0"></div>
             <div class="md:col-start-2 md:col-span-3 lg:col-start-2 lg:col-span-4 pt-12 z-10">
-              <a href="#" class="block uppercase text-white md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn"><span class="fab fa-facebook-square"></span>&nbsp;&nbsp;Facebook groep &#x9b;</a>
-              <a href="mailto:jezus@stroomamsterdam.nl" class="md:hidden uppercase text-white md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn"><span class="fas fa-envelope"></span>&nbsp;&nbsp;jezus@stroomamsterdam.nl &#x9b;</a>
+              <a href="https://www.facebook.com/groups/STROOMAmsterdam" target="_blank" rel="noreferrer noopener" class="block uppercase text-white md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn"><span class="fab fa-facebook-square"></span>&nbsp;&nbsp;<span class="hover:underline">Facebook groep</span> &#x9b;</a>
+              <a href="mailto:jezus@stroomamsterdam.nl" class="md:hidden uppercase text-white md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn"><span class="fas fa-envelope"></span>&nbsp;&nbsp;<span class="hover:underline">jezus@stroomamsterdam.nl</span> &#x9b;</a>
             </div>
           </div>
           <div class="md:col-span-4 lg:col-span-7 relative md:grid md:grid-cols-4 lg:grid-cols-5 hidden">
             <div class="w-screen border-t-4 border-l-4 border-b-4 border-lila rounded-l-2xl pt-12 pb-24 lg:pb-32 text-right absolute left-0 top-0"></div>
             <div class="md:col-start-2 md:col-span-3 lg:col-start-2 lg:col-span-4 pt-12 z-10">
-              <a href="mailto:jezus@stroomamsterdam.nl" aria-hidden="true" class="uppercase text-white md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn"><span class="fas fa-envelope"></span>&nbsp;&nbsp;jezus@stroomamsterdam.nl &#x9b;</a>
+              <a href="mailto:jezus@stroomamsterdam.nl" aria-hidden="true" class="uppercase text-white md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn"><span class="fas fa-envelope"></span>&nbsp;&nbsp;<span class="hover:underline">jezus@stroomamsterdam.nl</span> &#x9b;</a>
             </div>
           </div>
 
@@ -188,13 +188,48 @@
         center: stroomLatLng,
         zoom: 17,
       });
-      const marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: stroomLatLng,
         map: map,
         label: {"Nieuwe Herengracht 18"},
         collisionBehavior: google.maps.CollisionBehavior.REQUIRED_AND_HIDES_OPTIONAL,
       });
     }
+  </script>
+  <script type="text/javascript">
+    var names = [
+      'Boris van der Ham, 2020',
+      'Michline Plukker, 2020',
+      'Hugo de Haas van Dorsser, 2020',
+      'Rikko Voorberg, 2018',
+      'Erno Eskens, 2019',
+      'Tim Vreugdenhil, 2019',
+      'Tinkebel, 2020',
+      'Michiel van Elk, 2017',
+      'Linda Polman, 2019',
+      'Don Ceder, 2019',
+      'Daan Borrel, 2019',
+      'Ewald Engelen, 2018',
+      'Bram Bakker, 2016',
+      'Simon(e) van Saarloos, 2016',
+    ];
+
+    function nameShuffle(currentIndex) {
+      var newIndex;
+
+      while(true) {
+        newIndex = Math.floor(Math.random() * Math.floor(14));
+        if (currentIndex !== newIndex) break;
+      }
+
+      nameEl.textContent = names[newIndex];
+      setTimeout(function() {
+        nameShuffle(newIndex)
+      }, 7000);
+    }
+
+    var nameEl = document.querySelector('.name-shuffle');
+    if (nameEl) nameShuffle();
   </script>
 </body>
 </html>
