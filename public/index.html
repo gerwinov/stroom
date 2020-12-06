@@ -188,11 +188,11 @@
         center: stroomLatLng,
         zoom: 17,
       });
-      var marker = new google.maps.Marker({
+      const marker = new google.maps.Marker({
         position: stroomLatLng,
         map: map,
-        label: {"Nieuwe Herengracht 18"},
-        collisionBehavior: google.maps.CollisionBehavior.REQUIRED_AND_HIDES_OPTIONAL,
+        label: {text: "Nieuwe Herengracht 18"},
+        //collisionBehavior: google.maps.CollisionBehavior.REQUIRED_AND_HIDES_OPTIONAL,
       });
     }
   </script>
