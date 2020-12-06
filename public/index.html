@@ -39,8 +39,8 @@
         <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 -mb-12 relative">
           <div class="col-span-3 md:col-start-2 lg:col-start-2 md:col-span-4 lg:col-span-6 my-12 md:mt-24 md:mb-20 lg:mb-40">
             <p class="text-coal text-sm md:text-lg lg:text-2xl leading-relaxed md:mb-8 font-HelveticaNeueLTPro-Ex pl-4">
-              Stroom verbindt ambitie, stad en traditie. Wentelt zich te vaak in ironie en te weinig in het heilige. 
-              Stroom bevraagt, belijdt en bijbelt. Kritisch, confronterend en relevant. 
+              Stroom verbindt hoofd met hart, stad en traditie. Wentelt zich te vaak in ironie en te weinig in het heilige.
+              Stroom bevraagt, belijdt en bijbelt. Kritisch, confronterend en relevant.
               Stroom is gemeenschap. Stroom is ernst. Stroom zoekt naar goed nieuws voor Amsterdam.
             </p>
           </div>
@@ -115,7 +115,8 @@
       <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 pt-16 md:pt-24">
         <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8">
           <h1 class="text-xl md:text-3xl lg:text-4xl font-black uppercase text-blue mb-5 lg:mb-8 z-10 font-HelveticaNeueLTPro-BlkEx">Hier moet je zijn</h1>
-          <div id="map-canvas" class="w-full" style="height: 299px"></div>
+          <div id="map-canvas" class="w-full" style="height: 400px; filter: grayscale(100%);"></div>
+          <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8 relative left-0 bg-blue bg-opacity-100" style="top: -400px; height: 400px; mix-blend-mode: overlay; pointer-events: none; filter: saturate(10)"></div>
         </div>
       </div>
     </div>
@@ -178,19 +179,20 @@
       </div>
     </div>
   </article>
-  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd2vYarNQQmRx3GT-SaUxK_r9hONyPe1E&map_ids=7ad385e174d1657c&callback=initMap"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd2vYarNQQmRx3GT-SaUxK_r9hONyPe1E&callback=initMap"></script>
   <script type="text/javascript">
     function initMap() {
-      const stroomLatLng = { lat: 52.366, lng: 4.904 };
+      // 52.36603646667439, 4.903751897899311
+      const stroomLatLng = { lat: 52.36604, lng: 4.90375 };
       const map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: stroomLatLng,
-        zoom: 16,
-        mapId: "7ad385e174d1657c"
+        zoom: 17,
       });
       const marker = new google.maps.Marker({
         position: stroomLatLng,
         map: map,
-        label: "Nieuwe Herengracht 18a"
+        label: {"Nieuwe Herengracht 18"},
+        collisionBehavior: google.maps.CollisionBehavior.REQUIRED_AND_HIDES_OPTIONAL,
       });
     }
   </script>
