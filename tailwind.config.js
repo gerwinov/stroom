@@ -26,6 +26,7 @@ module.exports = {
       },
       height: {
         '85': '25rem',
+        '105': '32rem',
       },
       fontFamily: {
         'HelveticaNeueLTPro-BlkEx': ['HelveticaNeueLTPro-BlkEx'],
