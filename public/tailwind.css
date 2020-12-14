@@ -29,6 +29,7 @@
 .dotted-red {
     background-image: url('../assets/ellipse.svg');
     background-size: 20px;
+    background-repeat: space;
 }
 
 .text-red-outline {
@@ -41,7 +42,7 @@
 }
 
 .h-full-dots-bottom {
-    height: calc(100% + 7rem);
+    height: calc(100% + 5rem);
 }
 
 .h-05 {
@@ -59,11 +60,11 @@
     }
 
     .h-full-dots-top {
-        height: calc(100% + 16rem) !important;
+        height: calc(100% + 15rem) !important;
     }
 
     .h-full-dots-bottom {
-        height: calc(100% + 35rem) !important;
+        height: calc(100% + 42rem) !important;
     }
 }
 
