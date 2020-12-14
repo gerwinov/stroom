@@ -49,6 +49,50 @@
     height: 0.125rem;
 }
 
+.yt-thumbnail-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.yt-thumbnail {
+    display: block;
+    margin: -21.875% 0;
+    padding: 12.5% 0;
+    filter: sepia(1) saturate(0);
+    -webkit-filter: sepia(1) saturate(0);
+}
+
+.yt-play {
+    width: 48px;
+    height: 60px;
+    border-color: transparent transparent transparent #FC9B59;
+    border-style: solid;
+    border-width: 30px 0 30px 48px;
+    box-sizing: border-box;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -30px;
+    pointer-events: none;
+}
+
+.gm-container {
+    height: 400px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.gm-overlay {
+    top: -400px;
+    height: 400px;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    filter: saturate(10) opacity(1);
+    -webkit-filter: saturate(10) opacity(1);
+}
+
 @media only screen and (min-width: 769px) {
     .dotted-red {
         background-size: 28px;
