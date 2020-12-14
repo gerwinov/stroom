@@ -265,7 +265,7 @@
     }
 
     function onLoad() {
-      thumbnailEl.src = "https://i.ytimg.com/vi/" + videoID + "/hqdefault.jpg";
+      thumbnailEl.src = "https://img.youtube.com/vi/" + videoID + "/hqdefault.jpg";  // maxresdefault.jpg or hqdefault.jpg -- try
       videoEl.src = "https://www.youtube.com/embed/" + videoID + "?enablejsapi=1";
       thumbnailEl.addEventListener("click", onThumbnailClick);
     }
