@@ -3,10 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
-  <link rel="preload" href="build/tailwind.css" as="style">
-  <link rel="stylesheet" href="build/tailwind.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"/>
   <title>STROOM Amsterdam</title>
 </head>
@@ -15,7 +11,7 @@
       <div class="container mx-auto px-4 md:px-0">
         <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 pt-16 pb-16 md:pb-40">
           <div class="col-span-2 md:col-span-3 lg:col-span-4 text-5xl pb-2 md-grid-cols-8 lg:grid-cols-12">
-            <img class="w-full" src="assets/logo-STROOM-red-pink-transparent-medium.png">
+            <img class="w-full" src="./assets/logo-STROOM-red-pink-transparent-medium.png">
           </div>
           <button class="col-span-1 col-start-4 md:col-start-8 md:col-span-1 lg:col-start-12 lg:col-span-1 h-8 md:h-10 w-full flex-wrap flex justify-end hidden" aria-label="menu">
             <span class="w-12 h-05 md:h-1 bg-red block mb-1"></span>
@@ -198,41 +194,6 @@
         },
       });
     }
-  </script>
-  <script type="text/javascript">
-    var names = [
-      'Boris van der Ham, 2020',
-      'Michline Plukker, 2020',
-      'Hugo de Haas van Dorsser, 2020',
-      'Rikko Voorberg, 2018',
-      'Erno Eskens, 2019',
-      'Tim Vreugdenhil, 2019',
-      'Tinkebel, 2020',
-      'Michiel van Elk, 2017',
-      'Linda Polman, 2019',
-      'Don Ceder, 2019',
-      'Daan Borrel, 2019',
-      'Ewald Engelen, 2018',
-      'Bram Bakker, 2016',
-      'Simon(e) van Saarloos, 2016',
-    ];
-
-    function nameShuffle(currentIndex) {
-      var newIndex;
-
-      while(true) {
-        newIndex = Math.floor(Math.random() * Math.floor(14));
-        if (currentIndex !== newIndex) break;
-      }
-
-      nameEl.textContent = names[newIndex];
-      setTimeout(function() {
-        nameShuffle(newIndex)
-      }, 7000);
-    }
-
-    var nameEl = document.querySelector('.name-shuffle');
-    if (nameEl) nameShuffle();
   </script>
 </body>
 </html>
