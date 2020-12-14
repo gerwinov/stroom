@@ -26,7 +26,7 @@
             <div class="text-xl md:text-2xl lg:text-4xl font-black uppercase leading-tight relative md:-right-12">
               <h1 class="text-coal font-HelveticaNeueLTPro-BlkEx">Stroom Amsterdam</h1>
               <h2 class="inline md:block text-red-outline font-HelveticaNeueLTPro-BlkEx">Zondagochtend 11 uur</h2>
-              <h2 class="inline md:block text-red-outline font-HelveticaNeueLTPro-BlkEx">Nieuwe Keizersgracht 1A</h2>
+              <h2 id="address1" class="inline md:block text-red-outline font-HelveticaNeueLTPro-BlkEx"></h2>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@
                 </li>
                 <li class="mb-6">
                   <h2 class="uppercase text-red text-base md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn">Waar vindt STROOM plaats op zondag om 11 uur?</h2>
-                  <span class="text-sm md:text-base lg:text-xl font-HelveticaNeueLTPro-Ex">Op de Nieuwe Keizersgracht 1A in Amsterdam.</span>
+                  <span class="text-sm md:text-base lg:text-xl font-HelveticaNeueLTPro-Ex">Op de <span id="address2"></span> in Amsterdam.</span>
                 </li>
                 <li class="mb-6">
                   <h2 class="uppercase text-red text-base md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn">Komt Jezus ook?</h2>
@@ -192,6 +192,9 @@
       //const stroomAddress = "Nieuwe Herengracht 18";
       //const stroomLatLng = { lat: 52.36603646667439, lng: 4.903751897899311 };
 
+      document.getElementById("address1").innerHTML = stroomAddress;
+      document.getElementById("address2").innerHTML = stroomAddress;
+      
       const map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: stroomLatLng,
         zoom: 17,
@@ -246,7 +249,7 @@
   </script>
   <script type="text/javascript">
     // If you nwant to change the YT Video, do it ** HERE **!
-    const videoID = "27phEB7kAlA"; // "YNtUgLjQX_k";
+    const videoID = "27phEB7kAlA";
 
     var tag = document.createElement('script');
 
