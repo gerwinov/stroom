@@ -17,12 +17,12 @@
             <span class="w-12 h-05 md:h-1 bg-red block mb-1"></span>
             <span class="w-12 h-05 md:h-1 bg-red block my-2"></span>
             <span class="w-12 h-05 md:h-1 bg-magenta block mt-1"></span>
-            </button>
+          </button>
           <div class="col-span-4 md:col-span-6 lg:col-span-11 bg-orange px-4 md:text-right mt-12 md:mt-24 border-b-8 border-turquoise py-12">
             <div class="text-xl md:text-2xl lg:text-4xl font-black uppercase leading-tight relative md:-right-12">
               <h1 class="text-coal font-HelveticaNeueLTPro-BlkEx">Stroom Amsterdam</h1>
               <h2 class="inline md:block text-red-outline font-HelveticaNeueLTPro-BlkEx">Zondagochtend 11 uur</h2>
-              <h2 class="inline md:block text-red-outline font-HelveticaNeueLTPro-BlkEx">Nieuwe Keizersgracht 1A</h2>
+              <h2 id="address1" class="inline md:block text-red-outline font-HelveticaNeueLTPro-BlkEx"></h2>
             </div>
           </div>
         </div>
@@ -67,7 +67,11 @@
           <h1 class="text-xl md:text-3xl lg:text-4xl font-black uppercase text-magenta md:mb-12 font-HelveticaNeueLTPro-BlkEx">Aanstaande zondag</h1>
         </div>
         <div class="col-span-4 md:col-start-2 lg:col-start-2 md:col-span-4 lg:col-span-7 bg-white h-64 md:h-85 shadow-sharp-lila mr-4 md:mr-8">
-          <iframe style="filter: sepia(1) saturate(0); -webkit-filter: sepia(1) saturate(0);" class="w-full h-full" src="https://www.youtube.com/embed/YNtUgLjQX_k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding" allowfullscreen></iframe>
+          <figure class="yt-thumbnail-container">
+            <img id="youtubethumbnail" class="w-full yt-thumbnail" />
+          </figure>
+          <div id="youtubebutton" class="yt-play"></div>
+          <iframe id="youtubevideo" class="w-full h-full hidden" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; modestbranding" allowfullscreen></iframe>
         </div>
         <div class="col-span-4 md:col-start-6 md:col-span-3 lg:col-start-10 lg:col-span-3">
           <p class="text-sm md:text-base lg:text-2xl leading-relaxed mt-8 md:mt-0 mb-4 md:mb-16 text-white font-HelveticaNeueLTPro-Ex">
@@ -109,8 +113,8 @@
       <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4 pt-16 md:pt-24">
         <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8">
           <h1 class="text-xl md:text-3xl lg:text-4xl font-black uppercase text-blue mb-5 lg:mb-8 z-10 font-HelveticaNeueLTPro-BlkEx">Hier moet je zijn</h1>
-          <div id="map-canvas" class="w-full" style="height: 400px; filter: grayscale(100%);"></div>
-          <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8 relative left-0 bg-blue" style="top: -400px; height: 400px; pointer-events: none; mix-blend-mode: overlay; filter: saturate(10) opacity(1)"></div>
+          <div id="map-canvas" class="w-full gm-container"></div>
+          <div class="col-span-4 md:col-start-4 md:col-span-5 lg:col-start-5 lg:col-span-8 relative left-0 bg-blue gm-overlay"></div>
         </div>
       </div>
     </div>
@@ -152,7 +156,7 @@
                 </li>
                 <li class="mb-6">
                   <h2 class="uppercase text-red text-base md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn">Waar vindt STROOM plaats op zondag om 11 uur?</h2>
-                  <span class="text-sm md:text-base lg:text-xl font-HelveticaNeueLTPro-Ex">Op de Nieuwe Keizersgracht 1A in Amsterdam.</span>
+                  <span class="text-sm md:text-base lg:text-xl font-HelveticaNeueLTPro-Ex">Op de <span id="address2"></span> in Amsterdam.</span>
                 </li>
                 <li class="mb-6">
                   <h2 class="uppercase text-red text-base md:text-lg lg:text-2xl font-HelveticaNeueLTPro-MdCn">Komt Jezus ook?</h2>
@@ -176,8 +180,17 @@
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd2vYarNQQmRx3GT-SaUxK_r9hONyPe1E&callback=initMap"></script>
   <script type="text/javascript">
     function initMap() {
-      // 52.36603646667439, 4.903751897899311
-      const stroomLatLng = { lat: 52.36604, lng: 4.90375 };
+      // Nieuwe Keizersgracht 1A locatie:
+      const stroomAddress = "Nieuwe Keizersgracht 1A";
+      const stroomLatLng = { lat: 52.365171869533896, lng: 4.904267618367831 };
+      
+      // Nieuwe Herengracht 18 locatie:
+      //const stroomAddress = "Nieuwe Herengracht 18";
+      //const stroomLatLng = { lat: 52.36603646667439, lng: 4.903751897899311 };
+
+      document.getElementById("address1").innerHTML = stroomAddress;
+      document.getElementById("address2").innerHTML = stroomAddress;
+      
       const map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: stroomLatLng,
         zoom: 17,
@@ -187,13 +200,48 @@
         map: map,
         animation: google.maps.Animation.DROP,
         label: {
-          text: "Nieuwe Herengracht 18",
+          text: stroomAddress,
           fontWeight: "bold",
           fontSize: "16px",
-          color: "blue"
+          color: "blue",
         },
       });
     }
+  </script>
+  <script type="text/javascript">
+    // If you nwant to change the YT Video, do it ** HERE **!
+    const videoID = "27phEB7kAlA";
+
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtubevideo', {
+        videoId: videoID,
+        });
+    }
+
+    function onLoad() {
+        thumbnailEl.src = "https://img.youtube.com/vi/" + videoID + "/hqdefault.jpg";  // maxresdefault.jpg or hqdefault.jpg -- try
+        videoEl.src = "https://www.youtube.com/embed/" + videoID + "?enablejsapi=1";
+        thumbnailEl.addEventListener("click", onThumbnailClick);
+    }
+
+    function onThumbnailClick() {
+        thumbnailEl.parentNode.classList.add("hidden");
+        playEl.classList.add("hidden");
+        videoEl.classList.remove("hidden");
+        player.playVideo();
+    }
+
+    const thumbnailEl = document.getElementById("youtubethumbnail");
+    const playEl = document.getElementById("youtubebutton");
+    const videoEl = document.getElementById("youtubevideo");
+    if (thumbnailEl) onLoad();
   </script>
 </body>
 </html>
