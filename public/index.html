@@ -184,8 +184,14 @@
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd2vYarNQQmRx3GT-SaUxK_r9hONyPe1E&callback=initMap"></script>
   <script type="text/javascript">
     function initMap() {
-      // 52.36603646667439, 4.903751897899311
-      const stroomLatLng = { lat: 52.36604, lng: 4.90375 };
+      // Nieuwe Keizersgracht 1A locatie:
+      const stroomAddress = "Nieuwe Keizersgracht 1A";
+      const stroomLatLng = { lat: 52.365171869533896, lng: 4.904267618367831 };
+      
+      // Nieuwe Herengracht 18 locatie:
+      //const stroomAddress = "Nieuwe Herengracht 18";
+      //const stroomLatLng = { lat: 52.36603646667439, lng: 4.903751897899311 };
+
       const map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: stroomLatLng,
         zoom: 17,
@@ -195,10 +201,10 @@
         map: map,
         animation: google.maps.Animation.DROP,
         label: {
-          text: "Nieuwe Herengracht 18",
+          text: stroomAddress,
           fontWeight: "bold",
           fontSize: "16px",
-          color: "blue"
+          color: "blue",
         },
       });
     }
