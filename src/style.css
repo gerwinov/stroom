@@ -52,12 +52,13 @@
 .yt-thumbnail-container {
     width: 100%;
     overflow: hidden;
-    margin: 0;
+    height: 100%;
 }
 
 .yt-thumbnail {
     position: relative;
     top: 50%;
+    transform: translateY(-50%);
     filter: sepia(1) saturate(0);
     -webkit-filter: sepia(1) saturate(0);
 }
