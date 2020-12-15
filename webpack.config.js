@@ -10,8 +10,8 @@ module.exports = {
   entry: './src/main.js',
 
   output: {
-    publicPath: '/',
-    filename: env === 'development' ? 'bundle.js' : 'bundle.[contenthash].min.js',
+    publicPath: '',
+    filename: env === 'development' ? 'bundle.js' : 'js/bundle.[contenthash].min.js',
     chunkFilename: env === 'development' ? 'dist/[name].js' : 'dist/[name].[contenthash].min.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -31,8 +31,8 @@ module.exports = {
             test: /\.css$/,
             use: [
             env === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-            { loader: 'css-loader', options: { importLoaders: 2, sourceMap: true } },
-            { loader: 'postcss-loader', options: { sourceMap: true } },
+            { loader: 'css-loader', options: { importLoaders: 2 } },
+            { loader: 'postcss-loader' },
             ]
         },
 
@@ -41,6 +41,9 @@ module.exports = {
             use: [
             {
                 loader: 'file-loader',
+                options: {
+                  outputPath: 'assets',
+                },
             },
             ],
         },
