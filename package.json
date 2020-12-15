@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack serve",
     "production": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
-    "deploy": "push-dir --dir=public --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",
@@ -23,6 +23,7 @@
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "push-dir": "^0.4.1",
+    "robotstxt-webpack-plugin": "^7.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
