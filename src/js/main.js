@@ -34,8 +34,8 @@ function nameShuffle(currentIndex) {
 var nameEl = document.querySelector('.name-shuffle');
 if (nameEl) nameShuffle();
 
-window.onload = function() {
+setTimeout(function() {
     if (!!window.MSInputMethodContext && !!document.documentMode) {
         document.getElementById('ie11-warning').classList.remove('hidden');
     }
-};
+}, 500);
