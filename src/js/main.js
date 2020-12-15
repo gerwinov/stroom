@@ -1,4 +1,4 @@
-import './style.css';
+import '../css/style.css';
 
 var names = [
     'Boris van der Ham, 2020',

@@ -7,11 +7,11 @@ const env = process.env.NODE_ENV;
 module.exports = {
   mode: process.env.NODE_ENV,
 
-  entry: './src/main.js',
+  entry: './src/js/main.js',
 
   output: {
     publicPath: '',
-    filename: env === 'development' ? 'bundle.js' : 'js/bundle.[contenthash].min.js',
+    filename: env === 'development' ? 'bundle.js' : 'bundle.[contenthash].min.js',
     chunkFilename: env === 'development' ? 'dist/[name].js' : 'dist/[name].[contenthash].min.js',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -43,6 +43,7 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                   outputPath: 'assets',
+                  publicPath: 'assets'
                 },
             },
             ],
@@ -57,7 +58,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].min.css'
+      filename: '[name].[contenthash].min.css'
     }),
 
     new HtmlWebpackPlugin({
