@@ -66,7 +66,7 @@
 .yt-play {
     width: 48px;
     height: 60px;
-    border-color: transparent transparent transparent #FC9B59;
+    border-color: transparent transparent transparent theme('colors.orange');
     border-style: solid;
     border-width: 30px 0 30px 48px;
     box-sizing: border-box;
