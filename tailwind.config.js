@@ -14,6 +14,7 @@ module.exports = {
       lila: '#F687F9',
       magenta: '#FF00FF',
       coal: '#282828',
+      black: '#000',
     },
     boxShadow: {
       'sharp-lila': '20px 20px 0px 3px #F687F9'
