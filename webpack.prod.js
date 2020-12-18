@@ -21,6 +21,7 @@ module.exports = merge(common, {
               { from: "src/assets/favicons", to: "assets/favicons" },
               { from: "src/assets/favicon.ico", to: "" },
               { from: "src/assets/str00m_avatar.png", to: "" },
+              { from: "src/CNAME", to: "" },
             ],
           }),
     ],
