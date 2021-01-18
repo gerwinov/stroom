@@ -3,3 +3,5 @@ dist
 yarn.lock
 package-lock.json
 .DS_Store
+_site
+.jekyll-cache
