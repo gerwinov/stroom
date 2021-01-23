@@ -3,8 +3,12 @@
   "version": "0.9.0",
   "private": true,
   "scripts": {
-    "serve": "cross-env NODE_ENV=development webpack serve",
-    "production": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "serve": "npm run dev:assets & npm run dev:site",
+    "production": "npm run build:assets & npm run build:site",
+    "dev:assets": "cross-env NODE_ENV=development webpack",
+    "dev:site": "ELEVENTY_ENV=development npx eleventy --serve",
+    "build:assets": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "build:site": "ELEVENTY_ENV=production npx eleventy",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
@@ -12,23 +16,22 @@
     "tailwindcss": "^1.7.2"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.1",
     "cssnano": "^4.1.10",
     "file-loader": "^6.2.0",
-    "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.3.3",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "push-dir": "^0.4.1",
-    "robotstxt-webpack-plugin": "^7.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.10.1",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.7.0"
+    "webpack-manifest-plugin": "^3.0.0",
+    "webpack-merge": "^5.7.0",
+    "webpack-nano": "^1.1.1"
   }
 }

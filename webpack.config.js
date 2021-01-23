@@ -1,11 +1,13 @@
 const path                 = require('path');
-const HtmlWebpackPlugin    = require('html-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const env = process.env.NODE_ENV;
 
 module.exports = {
   mode: process.env.NODE_ENV,
+
+  watch: true,
 
   entry: './src/js/main.js',
 
@@ -48,11 +50,6 @@ module.exports = {
             },
             ],
         },
-
-        {
-            test: /\.html$/i,
-            loader: 'html-loader',
-        }
     ],
   },
 
@@ -61,9 +58,6 @@ module.exports = {
       filename: '[name].[contenthash].min.css'
     }),
 
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html'
-    }),
+    new WebpackManifestPlugin({}),
   ],
 }
