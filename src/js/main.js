@@ -1,6 +1,8 @@
 import '../css/style.css';
 
 var names = [
+    'Iris Penning, 2021',
+    'Jorgen Unom, 2021',
     'Boris van der Ham, 2020',
     'Michline Plukker, 2020',
     'Hugo de Haas van Dorsser, 2020',
