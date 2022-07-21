@@ -1,14 +1,16 @@
 import '../css/style.css';
 
 var names = [
-    'Iris Penning, 2021',
-    'Jorgen Unom, 2021',
+    'Mounir Samuel, 2022',
+    'Jorgen Unom, 2022',
+    'Tim Vreugdenhil, 2022',
+    'Alaeddine Touhami, 2022',
+    'Iris Penning, 2022',
     'Boris van der Ham, 2020',
     'Michline Plukker, 2020',
     'Hugo de Haas van Dorsser, 2020',
     'Rikko Voorberg, 2018',
     'Erno Eskens, 2019',
-    'Tim Vreugdenhil, 2019',
     'Tinkebel, 2020',
     'Michiel van Elk, 2017',
     'Linda Polman, 2019',
