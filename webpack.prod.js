@@ -2,7 +2,6 @@ const { merge }              = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const path = require('path');
 
 const common = require('./webpack.config.js');
 
@@ -20,7 +19,7 @@ module.exports = merge(common, {
         new CopyPlugin({
             patterns: [
               { from: "src/assets/favicons", to: "assets/favicons" },
-              { from: "*.pdf", to: "assets", context: path.resolve(__dirname, "src", "assets") },
+              { from: "*.pdf", to: "assets", context: "src/assets" },
               { from: "src/assets/favicon.ico", to: "" },
               { from: "src/assets/str00m_avatar.png", to: "" },
               { from: "src/CNAME", to: "" },
